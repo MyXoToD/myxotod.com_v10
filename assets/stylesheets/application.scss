@@ -1,0 +1,46 @@
+/* ****************************** */
+/* *********** IMPORTS ********** */
+/* ****************************** */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700);
+
+/* ****************************** */
+/* *********** MIXINS *********** */
+/* ****************************** */
+
+@mixin addTransition($s) {
+  transition: all $s+s ease;
+  -o-transition: all $s+s ease;
+  -ms-transition: all $s+s ease;
+  -moz-transition: all $s+s ease;
+  -webkit-transition: all $s+s ease;
+}
+
+/* ****************************** */
+/* *********** VARIABLES ******** */
+/* ****************************** */
+
+$color-alpha: #fff;
+
+$unit-alpha: 15px;
+
+/* ****************************** */
+/* *********** RESET ************ */
+/* *********** DEFAULTS ********* */
+/* ****************************** */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-weight: 400;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
