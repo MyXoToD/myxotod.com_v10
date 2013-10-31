@@ -44,3 +44,33 @@ body {
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
 }
+
+.wrapper {
+  width: 100%;
+  .left-col {
+    max-width: 500px;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: red;
+  }
+  .right-col {
+    position: absolute;
+    left: 500px;
+    background: yellow;
+  }
+}
+
+@media screen and (max-width: 1668px) {
+  .wrapper {
+    .left-col {
+
+    }
+    .right-col {
+      width: 70%;
+      left: 30%;
+    }
+  }
+}
