@@ -3,4 +3,8 @@ layout: stream
 title: Stream
 ---
 
-Hello World.
+{% for post in site.posts %}
+  <article>
+    {{ post.title }}
+  </article>
+{% endfor %}

@@ -1,13 +1,74 @@
 $(document).ready(function() {
-  // Calculate width of right column
-  // if ($(window).width() > 1668) {
-  //   var width = $(window).width() - 500;
-  //   $('.right-col').css("width", width + "px");
-  // }
+  // Avatar Height
+  $('.avatar').css('height', $('.avatar').width() + 'px');
   $(window).resize(function() {
-    if ($(window).width() > 1668) {
-      var width = $(window).width() - 500;
-      $('.right-col').css("width", width + "px");
-    }
+    $('.avatar').css('height', $('.avatar').width() + 'px');
+    $('.phrases h1').css("z-index", 1); // Font-Size Update Fix
   });
+
+  // Phrases
+  $('.phrases').html("<h1>" + Phrases[0] + "</h1>");
+  var intervalPhrases = setInterval("initPhrases()", 5000);
 });
+
+var Phrases = new Array(
+  "I go by the<br />name <a href='/about/'>Max</a>",
+  "I go to work<br />at <a href='http://www.opoloo.com' target='_blank'>Opoloo</a>",
+  "I push to master<br />on <a href='http://www.github.com/MyXoToD' target='_blank'>Github</a>",
+  "I code stuff<br />on <a href='http://www.codepen.io/MyXoToD' target='_blank'>CodePen</a>",
+  "I post tweets<br />on <a href='http://www.twitter.com/MyXoToD' target='_blank'>Twitter</a>",
+  "I write stories<br />on <a href='https://medium.com/@MyXoToD' target='_blank'>Medium</a>",
+  "I listen to music<br />on <a href='http://open.spotify.com/user/1145610126' target='_blank'>Spotify</a>"
+);
+
+var currentPhrase = 0;
+var direction = "left";
+var countPhrases = Phrases.length - 1;
+var phrasesSpeed = 500;
+
+function initPhrases() {
+  var box = $('.phrases');
+  currentPhrase++;
+  if (currentPhrase > countPhrases) {
+    currentPhrase = 0;
+  }
+  var next = $("<h1>" + Phrases[currentPhrase] + "</h1>");
+  switch (direction) {
+    case "left":
+      next.css("margin-left", "-100%");
+      next.css("opacity", "0");
+      box.prepend(next);
+
+      $('.phrases h1:last-of-type').animate({
+        marginLeft: "100%",
+        opacity: "0"
+      }, phrasesSpeed, function() {
+        $(this).remove();
+      });
+      $('.phrases h1:first-of-type').animate({
+        marginLeft: "0",
+        opacity: "1"
+      }, phrasesSpeed);
+
+      direction = "right";
+    break;
+    case "right":
+      next.css("margin-left", "100%");
+      next.css("opacity", "0");
+      box.append(next);
+
+      $('.phrases h1:first-of-type').animate({
+        marginLeft: "-100%",
+        opacity: "0"
+      }, phrasesSpeed, function() {
+        $(this).remove();
+      });
+      $('.phrases h1:last-of-type').animate({
+        marginLeft: "0",
+        opacity: "1"
+      }, phrasesSpeed);
+
+      direction = "left";
+    break;
+  }
+}
