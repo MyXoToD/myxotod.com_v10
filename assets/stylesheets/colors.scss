@@ -17,5 +17,18 @@ $color-gamma: #3498db;
         }
       }
     }
+    .right-col {
+      .content {
+        article {
+          header {
+            h1 {
+              a {
+                color: $color-alpha;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

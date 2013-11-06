@@ -5,6 +5,18 @@ title: Stream
 
 {% for post in site.posts %}
   <article>
-    {{ post.title }}
+    <header>
+      <h1>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h1>
+      <div class="meta">
+        <div class="time">{{ post.date }}</div>
+        <div class="reading-time">
+          {% words = post.content %}
+          {{ words }}
+        </div>
+      </div>
+    </header>
+    <p>{{ post.excerpt }}</p>
   </article>
 {% endfor %}

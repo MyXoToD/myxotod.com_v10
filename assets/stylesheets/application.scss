@@ -163,6 +163,14 @@ a {
       article {
         width: 100%;
         background: #fff;
+        header {
+          h1 {
+            a {
+              font-family: 'Raleway', sans-serif;
+              font-size: 28px;
+            }
+          }
+        }
       }
     }
   }
