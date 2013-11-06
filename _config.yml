@@ -1,3 +1,4 @@
 name: MyXoToD
 markdown: redcarpet
 pygments: true
+gems: [read-time]
