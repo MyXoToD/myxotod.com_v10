@@ -1,0 +1,21 @@
+$color-alpha: #e74c3c;
+$color-beta: #2ecc71;
+$color-gamma: #3498db;
+
+.red {
+  .page {
+    .left-col {
+      .avatar {
+        border: 5px solid $color-alpha;
+      }
+      nav {
+        a {
+          background-color: $color-alpha;
+          &:hover {
+            background-color: darken($color-alpha, 20%);
+          }
+        }
+      }
+    }
+  }
+}
