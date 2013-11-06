@@ -12,8 +12,7 @@ title: Stream
       <div class="meta">
         <div class="time">{{ post.date }}</div>
         <div class="reading-time">
-            {% capture time %}{{ content | reading_time }}{% endcapture %}
-            <p>This article will take {{ time }} {% if time == '1' %}minute{% else %}minutes{% endif %} to read.</p>
+            <p>This article will take {{ post.content | reading_time }} to read.</p>
         </div>
       </div>
     </header>
