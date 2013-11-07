@@ -1,4 +1,7 @@
-name: MyXoToD
+name:     MyXoToD
 markdown: redcarpet
 pygments: true
-gems: [read-time]
+
+relative_permalinks: true
+permalink:           :title
+#gems: [read-time]

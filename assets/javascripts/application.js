@@ -1,16 +1,25 @@
 $(document).ready(function() {
-  // Avatar Height
+  // Calculate avatar Height
   $('.avatar').css('height', $('.avatar').width() + 'px');
   $(window).resize(function() {
     $('.avatar').css('height', $('.avatar').width() + 'px');
     $('.phrases h1').css("z-index", 1); // Font-Size Update Fix
   });
 
-  // Phrases
+  // Init Phrases + Start Loop
   $('.phrases').html("<h1>" + Phrases[0] + "</h1>");
-  var intervalPhrases = setInterval("initPhrases()", 5000);
+  var intervalPhrases = setInterval("initPhrases()", 3500);
+
+  // Stop and start phrases animation on mouseover/leave
+  $(document).on("mouseover", ".phrases", function() {
+    clearInterval(intervalPhrases);
+  });
+  $(document).on("mouseleave", ".phrases", function() {
+    intervalPhrases = setInterval("initPhrases()", 3500);
+  });
 });
 
+// List of all phrases
 var Phrases = new Array(
   "I go by the<br />name <a href='/about/'>Max</a>",
   "I go to work<br />at <a href='http://www.opoloo.com' target='_blank'>Opoloo</a>",
@@ -21,11 +30,13 @@ var Phrases = new Array(
   "I listen to music<br />on <a href='http://open.spotify.com/user/1145610126' target='_blank'>Spotify</a>"
 );
 
+// Phases settings
 var currentPhrase = 0;
 var direction = "left";
 var countPhrases = Phrases.length - 1;
 var phrasesSpeed = 500;
 
+// Animate phrases
 function initPhrases() {
   var box = $('.phrases');
   currentPhrase++;
