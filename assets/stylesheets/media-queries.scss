@@ -11,15 +11,31 @@ smaller than 800px (Mobile Landscape)
 @media screen and (max-width: 800px) {
   .page {
     .left-col {
+      height: auto;
       width: 100%;
+      position: relative;
+      padding: 20px 0;
+      .avatar {
+        margin: 0 auto 20px auto;
+      }
+      nav {
+        width: 100%;
+        text-align: center;
+        a {
+          display: inline-block;
+          width: auto;
+          padding: 0 15px;
+          margin: 0px 8px;
+        }
+      }
     }
     .right-col {
       width: 100%;
       height: auto;
       left: 0;
-      top: 100%;
+      position: relative;
       .content {
-        padding: 20px;
+        padding: 20px 0;
       }
     }
   }
