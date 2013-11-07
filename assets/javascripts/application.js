@@ -6,6 +6,41 @@ $(document).ready(function() {
     $('.phrases h1').css("z-index", 1); // Font-Size Update Fix
   });
 
+  // Mobile Navigation
+  var navOpen = false;
+  var navSpeed = 300;
+  $(document).on("click", ".toggle-mobile-nav", function() {
+    if (navOpen) {
+      // Close
+      $(".mobile-nav").animate({
+        left: "-80%"
+      }, navSpeed);
+      $(".page").animate({
+        left: "0%"
+      }, navSpeed);
+      $(this).removeClass("entypo-cancel");
+      $(this).addClass("entypo-menu");
+      $(this).animate({
+        left: "-=80%"
+      }, navSpeed);
+      navOpen = false;
+    } else {
+      // Open
+      $(".mobile-nav").animate({
+        left: "0%"
+      }, navSpeed);
+      $(".page").animate({
+        left: "80%"
+      }, navSpeed);
+      $(this).removeClass("entypo-menu");
+      $(this).addClass("entypo-cancel");
+      $(this).animate({
+        left: "+=80%"
+      }, navSpeed);
+      navOpen = true;
+    }
+  });
+
   // Init Phrases + Start Loop
   $('.phrases').html("<h1>" + Phrases[0] + "</h1>");
   var intervalPhrases = setInterval("initPhrases()", 3500);

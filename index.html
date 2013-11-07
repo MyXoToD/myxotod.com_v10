@@ -14,9 +14,9 @@ title: Stream
       {{ post.excerpt }}
     </main>
     <footer>
-      <div class="date">{{ post.date | date: "%d %B %Y" }}</div>
+      <div class="info">{{ post.date | date: "%d %B %Y" }} &ndash; {{ post.category }}</div>
       <div class="reading-time">
-        {{ post.content.size | readtime }} min reading time
+        {{ post.content.size | readtime }} min reading time &ndash; {{ post.content | count_words }} words
       </div>
     </footer>
   </article>

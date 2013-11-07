@@ -6,6 +6,13 @@
 @import url(http://fonts.googleapis.com/css?family=Questrial);
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
 /* ****************************** */
 /* *********** MIXINS *********** */
 /* ****************************** */
@@ -61,13 +68,14 @@ $unit-alpha: 15px;
 
 html, body {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
   font-weight: 400;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
-  background-color: #333;
+  background-color: #ddd;
 }
 
 a {
@@ -75,10 +83,44 @@ a {
 }
 
 .mobile-nav {
-  position: absolute;
-  display: none;
+  position: fixed;
+  width: 80%;
+  height: 100%;
+  background-color: #333;
+  box-shadow: inset -10px 0 10px -10px #000;
+  left: -80%;
+  a {
+    color: #fff;
+    display: block;
+    padding: 20px 0px 20px 60px;
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase;
+    @include addTransition(background, 0.3s);
+    &:last-of-type {
+      border-top: 1px solid #fff;
+      border-bottom: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
 }
 .page {
+  position: relative;
+  .toggle-mobile-nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 100;
+    color: #fff;
+    display: none;
+  }
   .left-col {
     width: 30%;
     position: fixed;
@@ -160,32 +202,41 @@ a {
         width: 100%;
         margin-bottom: 30px;
         header {
+          @include BorderBox();
           margin-bottom: 5px;
-          border-radius: 0 20px 20px 0;
+          border-radius: 0 5px 5px 0;
           padding: 0 0 0 60px;
           height: 40px;
           line-height: 40px;
           background: #fff;
+          width: 100%;
           h1 {
+            font-weight: 300;
+            font-size: 28px;
             a {
-              font-weight: 300;
-              font-size: 28px;
+              
             }
           }
         }
         main {
+          @include BorderBox();
           margin-bottom: 5px;
+          width: 90%;
           background: #fff;
-          border-radius: 0 20px 20px 0;
+          border-radius: 0 5px 5px 0;
           padding: 15px 15px 15px 60px;
         }
         footer {
+          @include BorderBox();
           background: #fff;
+          width: 90%;
           height: 20px;
           line-height: 20px;
           padding: 0 15px 0 60px;
-          border-radius: 0 10px 10px 0;
-          .date {
+          border-radius: 0 5px 5px 0;
+          font-size: 12px;
+          color: #999;
+          .info {
             float: left;
           }
           .reading-time {
