@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   // Mobile Navigation
   var navOpen = false;
-  var navSpeed = 300;
+  var navSpeed = 200;
   $(document).on("click", ".toggle-mobile-nav", function() {
     if (navOpen) {
       // Close
@@ -16,8 +16,9 @@ $(document).ready(function() {
         left: "-80%"
       }, navSpeed);
       $(".page").animate({
-        left: "0%"
-      }, navSpeed);
+        left: "0%",
+        right: "0%"
+      }, navSpeed).css("position", "absolute");
       $(this).removeClass("entypo-cancel");
       $(this).addClass("entypo-menu");
       $(this).animate({
@@ -30,8 +31,9 @@ $(document).ready(function() {
         left: "0%"
       }, navSpeed);
       $(".page").animate({
-        left: "80%"
-      }, navSpeed);
+        left: "80%",
+        right: "-80%"
+      }, navSpeed).css("position", "fixed");
       $(this).removeClass("entypo-menu");
       $(this).addClass("entypo-cancel");
       $(this).animate({
