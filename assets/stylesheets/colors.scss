@@ -13,10 +13,16 @@ $color-gamma: #3498db;
   .page {
     .toggle-mobile-nav {
       background-color: $color-alpha;
+      &:hover {
+        background-color: darken($color-alpha, 20%);
+      }
     }
     .left-col {
       .avatar {
         border: 5px solid $color-alpha;
+        &:hover{
+          border: 5px solid darken($color-alpha, 20%);
+        }
       }
       nav {
         a {
@@ -28,6 +34,14 @@ $color-gamma: #3498db;
       }
     }
     .right-col {
+      a {
+        color: $color-alpha;
+        border-bottom: 1px solid #ddd;
+        &:hover {
+          color: darken($color-alpha, 20%);
+          border-bottom: 1px solid $color-alpha;
+        }
+      }
       .content {
         article {
           header {
@@ -35,6 +49,13 @@ $color-gamma: #3498db;
               color: $color-alpha;
               a {
                 color: $color-alpha;
+              }
+            }
+          }
+          &:hover {
+            main {
+              border-left: 5px solid $color-alpha;
+              &:before {
               }
             }
           }
@@ -59,6 +80,9 @@ $color-gamma: #3498db;
     .left-col {
       .avatar {
         border: 5px solid $color-beta;
+        &:hover{
+          border: 5px solid darken($color-beta, 20%);
+        }
       }
       nav {
         a {
@@ -101,6 +125,9 @@ $color-gamma: #3498db;
     .left-col {
       .avatar {
         border: 5px solid $color-gamma;
+        &:hover{
+          border: 5px solid darken($color-gamma, 20%);
+        }
       }
       nav {
         a {

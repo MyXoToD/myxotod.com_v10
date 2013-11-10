@@ -53,7 +53,7 @@ smaller than 800px (Mobile Landscape)
       left: 0;
       position: relative;
       .content {
-        padding: 20px 0;
+        padding: 20px;
       }
     }
   }
@@ -76,6 +76,17 @@ smaller than 480px (Mobile Portrait)
       }
       nav {
         display: none;
+      }
+    }
+    .right-col {
+      .content {
+        article {
+          header {
+            h1 {
+              text-align: center;
+            }
+          }
+        }
       }
     }
   }

@@ -2,9 +2,8 @@
 /* *********** IMPORTS ********** */
 /* ****************************** */
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700);
-@import url(http://fonts.googleapis.com/css?family=Questrial);
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700); // Text
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700); // Headline
 
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
@@ -64,6 +63,8 @@ $unit-alpha: 15px;
   margin: 0;
   padding: 0;
   border: 0;
+  transform: translateZ(0deg);
+  -webkit-transform: translateZ(0deg);
 }
 
 html, body {
@@ -75,11 +76,13 @@ body {
   font-weight: 400;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
-  background-color: #ddd;
+  background-color: #fff;
 }
 
 a {
   text-decoration: none;
+  @include addTransition(color, .5s);
+  @include addTransition(border-bottom, .5s);
 }
 
 .mobile-nav {
@@ -118,8 +121,10 @@ a {
     font-size: 35px;
     cursor: pointer;
     z-index: 100;
+    border-radius: 5px;
     color: #fff;
     display: none;
+    @include addTransition(background-color, .5s);
   }
   .left-col {
     width: 30%;
@@ -134,18 +139,14 @@ a {
     padding: 60px 0;
     @include BorderBox();
     .avatar {
-      width: 50%;
+      width: 30%;
       background-image: url(../images/avatar.jpg);
       background-size: cover;
       background-position: 50% 50%;
-      border-radius: 50%;
+      border-radius: 5px;
       margin: 0 auto 60px auto;
       display: block;
-      transition: -webkit-filter .5s ease, filter .5s ease;
-      &:hover {
-        filter: grayscale(1);
-        -webkit-filter: grayscale(1);
-      }
+      @include addTransition(border, .5s);
     }
     nav {
       width: 50%;
@@ -192,59 +193,40 @@ a {
     width: 70%;
     left: 30%;
     height: 100%;
-    background: #eee;
     .content {
       width: 100%;
-      max-width: 650px;
-      padding: 60px 0px;
+      max-width: 770px;
+      padding: 60px;
       @include BorderBox();
       article {
-        width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 46px;
         header {
-          @include BorderBox();
-          margin-bottom: 5px;
-          border-radius: 0 5px 5px 0;
-          padding: 0 0 0 60px;
-          height: 40px;
-          line-height: 40px;
-          background: #fff;
-          width: 100%;
           h1 {
+            font-family: 'Josefin Sans', sans-serif;
+            text-transform: uppercase;
+            font-size: 48px;
             font-weight: 300;
-            font-size: 28px;
+            letter-spacing: -3px;
+            line-height: 48px;
+            padding-bottom: 46px;
             a {
-              
+              border-bottom: 0;
             }
           }
         }
         main {
-          @include BorderBox();
-          margin-bottom: 5px;
-          width: 90%;
-          background: #fff;
-          border-radius: 0 5px 5px 0;
-          padding: 15px 15px 15px 60px;
+          padding-left: 20px;
+          margin-bottom: 10px;
+          position: relative;
+          border-left: 5px solid #ddd;
+          @include addTransition(border-left, .5s);
         }
         footer {
-          @include BorderBox();
-          background: #fff;
-          width: 90%;
-          height: 20px;
-          line-height: 20px;
-          padding: 0 15px 0 60px;
-          border-radius: 0 5px 5px 0;
           font-size: 12px;
           color: #999;
-          .info {
-            float: left;
-          }
-          .reading-time {
-            float: right;
-          }
-          &:after {
-            @include clearfix();
-          }
+        }
+        &:last-of-type {
+          margin-bottom: 0;
         }
       }
     }

@@ -12,11 +12,14 @@ title: Stream
     </header>
     <main>
       {{ post.excerpt }}
+      <p>
+        <a href="#">Read more &rarr;</a>
+      </p>
     </main>
     <footer>
       <div class="info">{{ post.date | date: "%d %B %Y" }} &ndash; {{ post.category }}</div>
       <div class="reading-time">
-        {{ post.content.size | readtime }} min reading time &ndash; {{ post.content | count_words }} words
+        {{ post.content.size | readtime }} min &ndash; {{ post.content | count_words }} words
       </div>
     </footer>
   </article>
