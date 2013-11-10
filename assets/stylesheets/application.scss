@@ -92,6 +92,7 @@ a {
   background-color: #333;
   box-shadow: inset -10px 0 10px -10px #000;
   left: -80%;
+  overflow: hidden;
   a {
     color: #fff;
     display: block;
@@ -211,6 +212,9 @@ a {
             padding-bottom: 46px;
             a {
               border-bottom: 0;
+              &:hover {
+                border-bottom: 0;
+              }
             }
           }
         }
