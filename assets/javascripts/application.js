@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('.avatar').css('height', $('.avatar').width() + 'px');
   $(window).resize(function() {
     $('.avatar').css('height', $('.avatar').width() + 'px');
-    $('.phrases h1').css("z-index", 1); // Font-Size Update Fix
+    $('.phrases h1, .about').css("z-index", 1); // Font-Size Update Fix
   });
 
   // Mobile Navigation

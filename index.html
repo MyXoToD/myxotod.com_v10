@@ -10,12 +10,12 @@ title: Stream
         <a href="{{ post.url }}">{{ post.title }}</a>
       </h1>
     </header>
-    <main>
+    <div class="teaser">
       {{ post.excerpt }}
       <p>
         <a href="#">Read more &rarr;</a>
       </p>
-    </main>
+    </div>
     <footer>
       <div class="info">{{ post.date | date: "%d %B %Y" }} &ndash; {{ post.category }}</div>
       <div class="reading-time">

@@ -3,6 +3,9 @@ $color-beta: #2ecc71;
 $color-gamma: #3498db;
 
 .red {
+  .section-color {
+    color: $color-alpha;
+  }
   .mobile-nav {
     a {
       &:hover {
@@ -52,8 +55,17 @@ $color-gamma: #3498db;
               }
             }
           }
+          main {
+            ul {
+              li {
+                &:before {
+                  color: $color-alpha;
+                }
+              }
+            }
+          }
           &:hover {
-            main {
+            .teaser {
               border-left: 5px solid $color-alpha;
               &:before {
               }
@@ -61,11 +73,19 @@ $color-gamma: #3498db;
           }
         }
       }
+      footer {
+        span {
+          color: $color-alpha;
+        }
+      }
     }
   }
 }
 
 .green {
+  .section-color {
+    color: $color-beta;
+  }
   .mobile-nav {
     a {
       &:hover {
@@ -76,6 +96,9 @@ $color-gamma: #3498db;
   .page {
     .toggle-mobile-nav {
       background-color: $color-beta;
+      &:hover {
+        background-color: darken($color-beta, 20%);
+      }
     }
     .left-col {
       .avatar {
@@ -94,6 +117,14 @@ $color-gamma: #3498db;
       }
     }
     .right-col {
+      a {
+        color: $color-beta;
+        border-bottom: 1px solid #ddd;
+        &:hover {
+          color: darken($color-beta, 20%);
+          border-bottom: 1px solid $color-beta;
+        }
+      }
       .content {
         article {
           header {
@@ -104,6 +135,27 @@ $color-gamma: #3498db;
               }
             }
           }
+          main {
+            ul {
+              li {
+                &:before {
+                  color: $color-beta;
+                }
+              }
+            }
+          }
+          &:hover {
+            .teaser {
+              border-left: 5px solid $color-beta;
+              &:before {
+              }
+            }
+          }
+        }
+      }
+      footer {
+        span {
+          color: $color-beta;
         }
       }
     }
@@ -111,6 +163,9 @@ $color-gamma: #3498db;
 }
 
 .blue {
+  .section-color {
+    color: $color-gamma;
+  }
   .mobile-nav {
     a {
       &:hover {
@@ -121,6 +176,9 @@ $color-gamma: #3498db;
   .page {
     .toggle-mobile-nav {
       background-color: $color-gamma;
+      &:hover {
+        background-color: darken($color-gamma, 20%);
+      }
     }
     .left-col {
       .avatar {
@@ -139,6 +197,14 @@ $color-gamma: #3498db;
       }
     }
     .right-col {
+      a {
+        color: $color-gamma;
+        border-bottom: 1px solid #ddd;
+        &:hover {
+          color: darken($color-gamma, 20%);
+          border-bottom: 1px solid $color-gamma;
+        }
+      }
       .content {
         article {
           header {
@@ -149,6 +215,27 @@ $color-gamma: #3498db;
               }
             }
           }
+          main {
+            ul {
+              li {
+                &:before {
+                  color: $color-gamma;
+                }
+              }
+            }
+          }
+          &:hover {
+            .teaser {
+              border-left: 5px solid $color-gamma;
+              &:before {
+              }
+            }
+          }
+        }
+      }
+      footer {
+        span {
+          color: $color-gamma;
         }
       }
     }

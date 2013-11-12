@@ -27,6 +27,10 @@ smaller than 800px (Mobile Landscape)
         width: 33.3%;
         margin: 0 auto 20px auto;
       }
+      .about {
+        width: 60%;
+        margin-bottom: 20px;
+      }
       nav {
         width: 60%;
         border-radius: 5px;
@@ -54,6 +58,18 @@ smaller than 800px (Mobile Landscape)
       position: relative;
       .content {
         padding: 20px;
+        article {
+          margin-bottom: 34px;
+          header {
+            h1 {
+              padding-bottom: 20px;
+              font-size: 36px;
+            }
+          }
+        }
+      }
+      > footer {
+        padding: 15px 20px;
       }
     }
   }
@@ -72,7 +88,11 @@ smaller than 480px (Mobile Portrait)
     }
     .left-col {
       .avatar {
+        
+      }
+      .about {
         margin: 0 auto;
+        width: 80%;
       }
       nav {
         display: none;
