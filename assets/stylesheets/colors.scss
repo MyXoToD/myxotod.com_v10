@@ -35,6 +35,15 @@ $color-gamma: #3498db;
           }
         }
       }
+      .phrases {
+        h1 {
+          a {
+            &:hover {
+              color: $color-alpha;
+            }
+          }
+        }
+      }
     }
     .right-col {
       a {
@@ -70,6 +79,16 @@ $color-gamma: #3498db;
               &:before {
               }
             }
+          }
+        }
+      }
+      .pagination {
+        a {
+          background-color: $color-alpha;
+          border-bottom: 0;
+          &:hover {
+            background-color: darken($color-alpha, 20%);
+            border-bottom: 0;
           }
         }
       }
@@ -118,6 +137,15 @@ $color-gamma: #3498db;
           background-color: $color-beta;
           &:hover {
             background-color: darken($color-beta, 20%);
+          }
+        }
+      }
+      .phrases {
+        h1 {
+          a {
+            &:hover {
+              color: $color-beta;
+            }
           }
         }
       }
@@ -204,6 +232,15 @@ $color-gamma: #3498db;
           background-color: $color-gamma;
           &:hover {
             background-color: darken($color-gamma, 20%);
+          }
+        }
+      }
+      .phrases {
+        h1 {
+          a {
+            &:hover {
+              color: $color-gamma;
+            }
           }
         }
       }

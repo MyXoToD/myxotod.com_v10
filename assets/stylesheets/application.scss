@@ -82,7 +82,6 @@ body {
 a {
   text-decoration: none;
   @include addTransition(color, .5s);
-  @include addTransition(border-bottom, .5s);
 }
 
 .mobile-nav {
@@ -198,6 +197,7 @@ a {
         a {
           color: #fff;
           font-weight: 700;
+          @include addTransition(color, .5s);
         }
       }
     }
@@ -270,11 +270,75 @@ a {
             color: #fff;
             font-size: 16px;
           }
+          .profiles {
+            font-size: 40px;
+            a {
+              border-bottom: 0;
+              &.entypo-github {
+                color: #000000;
+              }
+              &.entypo-twitter {
+                color: #55ACEE;
+              }
+              &.entypo-code {
+                color: #000000;
+              }
+              &.entypo-gplus {
+                color: #D34836;
+              }
+              &.entypo-instagrem {
+                color: #000000;
+              }
+              &.entypo-facebook {
+                color: #3B5998;
+              }
+              &.entypo-spotify {
+                color: #7AB800;
+              }
+              &.entypo-vimeo {
+                color: #1Ab7EA;
+              }
+              &.entypo-dribbble {
+                color: #EA4C89;
+              }
+              &.entypo-lastfm {
+                color: #E21B23;
+              }
+              &.entypo-soundcloud {
+                color: #FF6500;
+              }
+            }
+          }
         }
         footer {
           font-size: 12px;
           color: #999;
         }
+      }
+    }
+    .pagination {
+      text-align: center;
+      margin-bottom: 60px;
+      a {
+        display: inline-block;
+        padding: 0px 20px;
+        line-height: 50px;
+        height: 50px;
+        border-radius: 5px;
+        color: #fff !important;
+        @include addTransition(background-color, .5s);
+        &.disabled {
+          background-color: #333333 !important;
+        }
+      }
+      span {
+        display: inline-block;
+        background: #333;
+        color: #fff;
+        padding: 0px 20px;
+        line-height: 50px;
+        height: 50px;
+        border-radius: 5px;
       }
     }
     > footer {
@@ -292,6 +356,7 @@ a {
         position: absolute;
         content: "";
         top: -40px;
+        left: 0;
         background: linear-gradient(transparent, #fff);
       }
     }

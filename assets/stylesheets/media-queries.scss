@@ -68,8 +68,12 @@ smaller than 800px (Mobile Landscape)
           }
         }
       }
+      .pagination {
+        margin-bottom: 20px;
+      }
       > footer {
         padding: 15px 20px;
+        position: relative;
       }
     }
   }

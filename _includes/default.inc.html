@@ -28,6 +28,26 @@
   <div class="right-col">
     <div class="content">
       {{ content }}
+
+      {% if paginator.total_pages > 1 %}
+        <div class="pagination">
+          {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+              <a href="/" class="entypo-left-open-big"></a>
+            {% else %}
+              <a href="/page{{ paginator.previous_page }}" class="entypo-left-open-big"></a>
+            {% endif %}
+          {% else %}
+            <a href="javascript:void(0);" class="entypo-left-open-big disabled"></a>
+          {% endif %}
+          <span>{{ paginator.page }} / {{ paginator.total_pages }}</span>
+          {% if paginator.next_page %}
+            <a href="/page{{ paginator.next_page }}" class="entypo-right-open-big"></a>
+          {% else %}
+            <a href="javascript:void(0);" class="entypo-right-open-big disabled"></a>
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
     <footer>
       Handcrafted with <span class="entypo-heart"></span> by Max Boll &ndash; 
