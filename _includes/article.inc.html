@@ -1,0 +1,53 @@
+<section class="mobile-nav">
+  <nav>
+    <a href="/">Stream</a>
+    <a href="/about/">About</a>
+    <a href="/lab/">Lab</a>
+    <a href="#">Imprint</a>
+  </nav>
+</section>
+
+<section class="page">
+  <div class="toggle-mobile-nav entypo-menu"></div>
+  <aside class="left-col">
+    <a class="avatar" href="/">
+      
+    </a>
+    <div class="about">
+      Hello, my name is Max, I am a frontend &amp; backend web-developer from Mayence.
+    </div>
+    <nav>
+      <a href="/">Stream</a>
+      <a href="/about/">About</a>
+      <a href="/lab/">Lab</a>
+    </nav>
+    <div class="phrases hide-landscape">
+      
+    </div>
+  </aside>
+  <div class="right-col">
+    <div class="content">
+      <article>
+        <header>
+          <h1>{{ page.title }}</h1>
+        </header>
+        <main>
+          {{ content }}
+        </main>
+        <footer>
+          <div class="info">{{ page.date | date: "%d %B %Y" }} &ndash; {{ page.category }}</div>
+          <div class="reading-time">
+            {{ content.size | readtime }} min &ndash; {{ content | count_words }} words
+          </div>
+        </footer>
+      </article>
+    </div>
+    <footer>
+      Handcrafted with <span class="entypo-heart"></span> by Max Boll &ndash; 
+      Powered by <a href="http://www.jekyllrb.com" target="_blank">Jekyll</a> &ndash; 
+      Happy {{ site.time | date: "%A" }} &ndash; 
+      <a href="/imprint/">Imprint</a>
+    </footer>
+    <div class="to-top entypo-up-bold"></div>
+  </div>
+</section>
