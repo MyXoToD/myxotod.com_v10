@@ -357,7 +357,7 @@ a {
         content: "";
         top: -40px;
         left: 0;
-        background: linear-gradient(transparent, #fff);
+        background: linear-gradient(rgba(#fff, 0), rgba(#fff, 1));
       }
     }
     .to-top {
