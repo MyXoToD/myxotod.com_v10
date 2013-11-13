@@ -59,14 +59,14 @@ $(document).ready(function() {
 
   // Init Phrases + Start Loop
   $('.phrases').html("<h1>" + Phrases[0] + "</h1>");
-  var intervalPhrases = setInterval("initPhrases()", 3500);
+  var intervalPhrases = setInterval("initPhrases()", 2500);
 
   // Stop and start phrases animation on mouseover/leave
   $(document).on("mouseover", ".phrases", function() {
     clearInterval(intervalPhrases);
   });
   $(document).on("mouseleave", ".phrases", function() {
-    intervalPhrases = setInterval("initPhrases()", 3500);
+    intervalPhrases = setInterval("initPhrases()", 2500);
   });
 });
 
