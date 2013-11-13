@@ -78,6 +78,12 @@ $color-gamma: #3498db;
           color: $color-alpha;
         }
       }
+      .to-top {
+        background: $color-alpha;
+        &:hover {
+          background: darken($color-alpha, 20%);
+        }
+      }
     }
   }
 }
@@ -158,6 +164,12 @@ $color-gamma: #3498db;
           color: $color-beta;
         }
       }
+      .to-top {
+        background: $color-beta;
+        &:hover {
+          background: darken($color-beta, 20%);
+        }
+      }
     }
   }
 }
@@ -236,6 +248,12 @@ $color-gamma: #3498db;
       footer {
         span {
           color: $color-gamma;
+        }
+      }
+      .to-top {
+        background: $color-gamma;
+        &:hover {
+          background: darken($color-gamma, 20%);
         }
       }
     }

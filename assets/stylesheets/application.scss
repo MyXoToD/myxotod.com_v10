@@ -286,5 +286,21 @@ a {
         background: linear-gradient(transparent, #fff);
       }
     }
+    .to-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      height: 45px;
+      width: 45px;
+      line-height: 45px;
+      color: #fff;
+      z-index: 100;
+      text-align: center;
+      font-size: 35px;
+      border-radius: 5px;
+      @include addTransition(background, .5s);
+      cursor: pointer;
+      display: none;
+    }
   }
 }

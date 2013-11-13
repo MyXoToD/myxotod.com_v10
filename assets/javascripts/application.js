@@ -1,4 +1,18 @@
 $(document).ready(function() {
+  // Scroll Top Button
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 150) {
+      $(".to-top").fadeIn("slow");
+    } else {
+      $(".to-top").fadeOut("slow");
+    }
+  });
+  $(document).on("click", ".to-top", function() {
+    $("body, html").animate({
+      scrollTop: "0px"
+    });
+  });
+
   // Calculate avatar Height
   $('.avatar').css('height', $('.avatar').width() + 'px');
   $(window).resize(function() {
