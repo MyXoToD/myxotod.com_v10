@@ -68,6 +68,19 @@ $(document).ready(function() {
   $(document).on("mouseleave", ".phrases", function() {
     intervalPhrases = setInterval("initPhrases()", 2500);
   });
+
+  // Lab articles
+  $(document).on("click", ".lab article header", function() {
+    $(this).toggleClass("open");
+    if ($(this).hasClass("entypo-plus-circled")) {
+      $(this).removeClass("entypo-plus-circled");
+      $(this).addClass("entypo-minus-circled");
+    } else {
+      $(this).removeClass("entypo-minus-circled");
+      $(this).addClass("entypo-plus-circled");
+    }
+    $(this).next("main").slideToggle();
+  });
 });
 
 // List of all phrases

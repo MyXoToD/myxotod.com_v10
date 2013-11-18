@@ -378,3 +378,25 @@ a {
     }
   }
 }
+
+.lab {
+  article {
+    margin-bottom: 10px !important;
+    header {
+      color: #fff;
+      background-color: #3498db;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      &:before {
+        margin-right: 10px;
+      }
+      &.open {
+        border-radius: 5px 5px 0 0;
+      }
+    }
+    main {
+      display: none;
+    }
+  }
+}
