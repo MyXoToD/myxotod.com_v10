@@ -132,11 +132,11 @@ a {
     left: 0;
     top: 0;
     height: 100%;
-    background-image: url(https://place-it.s3.amazonaws.com/2013/44/48776/64d8893.png);
+    background-image: url(../images/cover.png);
     background-size: cover;
     background-position: 50% 50%;
     box-shadow: inset -15px 0px 15px -15px #000;
-    padding: 60px 0;
+    padding: 20px 0;
     @include BorderBox();
     .avatar {
       width: 30%;
