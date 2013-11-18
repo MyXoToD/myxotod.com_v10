@@ -59,14 +59,14 @@ $(document).ready(function() {
 
   // Init Phrases + Start Loop
   $('.phrases').html("<h1>" + Phrases[0] + "</h1>");
-  var intervalPhrases = setInterval("initPhrases()", 2500);
+  var intervalPhrases = setInterval("initPhrases()", 3500);
 
   // Stop and start phrases animation on mouseover/leave
   $(document).on("mouseover", ".phrases", function() {
     clearInterval(intervalPhrases);
   });
   $(document).on("mouseleave", ".phrases", function() {
-    intervalPhrases = setInterval("initPhrases()", 2500);
+    intervalPhrases = setInterval("initPhrases()", 3500);
   });
 
   // Lab articles
@@ -90,7 +90,7 @@ var Phrases = new Array(
   "I push to master<br />on <a href='http://www.github.com/MyXoToD' target='_blank'>Github</a>",
   "I code stuff<br />on <a href='http://www.codepen.io/MyXoToD' target='_blank'>CodePen</a>",
   "I post tweets<br />on <a href='http://www.twitter.com/MyXoToD' target='_blank'>Twitter</a>",
-  "I write stories<br />on <a href='https://medium.com/@MyXoToD' target='_blank'>Medium</a>",
+  //"I write stories<br />on <a href='https://medium.com/@MyXoToD' target='_blank'>Medium</a>",
   "I listen to music<br />on <a href='http://open.spotify.com/user/1145610126' target='_blank'>Spotify</a>"
 );
 
