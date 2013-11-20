@@ -70,7 +70,8 @@ $(document).ready(function() {
   });
 
   // Lab articles
-  $(document).on("click", ".lab article header", function(e) {
+  $(document).on("click", ".lab article header", function(event) {
+    event.preventDefault();
     $(this).toggleClass("open");
     if ($(this).hasClass("entypo-plus-circled")) {
       $(this).removeClass("entypo-plus-circled");
@@ -80,7 +81,6 @@ $(document).ready(function() {
       $(this).addClass("entypo-plus-circled");
     }
     $(this).next("main").slideToggle();
-    e.preventDefault();
   });
 });
 
