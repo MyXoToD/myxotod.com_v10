@@ -7,9 +7,13 @@ $color-gamma: #3498db;
     color: $color-alpha;
   }
   .mobile-nav {
-    a {
-      &:hover {
-        background: rgba($color-alpha, 0.3);
+    ul {
+      li {
+        a {
+          &:hover {
+            background: rgba($color-alpha, 0.3);
+          }
+        }
       }
     }
   }
@@ -28,10 +32,14 @@ $color-gamma: #3498db;
         }
       }
       nav {
-        a {
-          background-color: $color-alpha;
-          &:hover {
-            background-color: darken($color-alpha, 20%);
+        ul {
+          li {
+            a {
+              background-color: $color-alpha;
+              &:hover {
+                background-color: darken($color-alpha, 20%);
+              }
+            }
           }
         }
       }
@@ -112,9 +120,13 @@ $color-gamma: #3498db;
     color: $color-beta;
   }
   .mobile-nav {
-    a {
-      &:hover {
-        background: rgba($color-beta, 0.3);
+    ul {
+      li {
+        a {
+          &:hover {
+            background: rgba($color-beta, 0.3);
+          }
+        }
       }
     }
   }
@@ -133,10 +145,14 @@ $color-gamma: #3498db;
         }
       }
       nav {
-        a {
-          background-color: $color-beta;
-          &:hover {
-            background-color: darken($color-beta, 20%);
+        ul {
+          li {
+            a {
+              background-color: $color-beta;
+              &:hover {
+                background-color: darken($color-beta, 20%);
+              }
+            }
           }
         }
       }
@@ -207,9 +223,13 @@ $color-gamma: #3498db;
     color: $color-gamma;
   }
   .mobile-nav {
-    a {
-      &:hover {
-        background: rgba($color-gamma, 0.3);
+    ul {
+      li {
+        a {
+          &:hover {
+            background: rgba($color-gamma, 0.3);
+          }
+        }
       }
     }
   }
@@ -228,10 +248,14 @@ $color-gamma: #3498db;
         }
       }
       nav {
-        a {
-          background-color: $color-gamma;
-          &:hover {
-            background-color: darken($color-gamma, 20%);
+        ul {
+          li {
+            a {
+              background-color: $color-gamma;
+              &:hover {
+                background-color: darken($color-gamma, 20%);
+              }
+            }
           }
         }
       }
