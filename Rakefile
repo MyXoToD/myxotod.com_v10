@@ -22,7 +22,7 @@ class FTP < Net::FTP
 end
 
 HOST = "myxotod.de"
-USER = "w00be51f"
+USER = ""
 PASS = ""
 DESTINATION = "myxotod.de/v10"
 SOURCE = "_site/**/*"
