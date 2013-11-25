@@ -1,31 +1,5 @@
-require 'rake'
-require 'rake/contrib/ftptools'
-#capistrano
-
-class FTP < Net::FTP
-  def remove_all_below dir
-    dircontent = list("-A1", dir)
-    dircontent.each do |file|
-      filepath = File.join(dir, file)
-      begin
-        remove_all_below filepath
-        rmdir filepath
-      rescue
-        delete filepath
-      end
-    end
-  end
-  def remove_all dir
-    remove_all_below dir
-    rmdir dir
-  end
-end
-
-HOST = "myxotod.de"
-USER = ""
-PASS = ""
-DESTINATION = "myxotod.de/v10"
-SOURCE = "_site/**/*"
+require 'net/ssh'
+task :default => [:deploy]
 
 task :build do
   puts "----------"
@@ -39,41 +13,25 @@ task :build do
   puts ""
 end
 
-task :upload => :build do
+task :deploy => :build do
+  HOST = "myxotod.de"
+  USER = "ssh-w00be51f"
+  DESTINATION = "/www/htdocs/w00be51f/myxotod.de/v10"
+  SOURCE = "#{Dir.pwd}/_site/*"
+
   puts "----------"
-  puts "Uploading files to '#{HOST} (#{DESTINATION})'..."
-  Rake::FtpUploader.connect(DESTINATION, HOST, USER, PASS) do |ftp|
-    ftp.verbose = true
-    ftp.upload_files(SOURCE)
-  end
-  puts "Upload done."
+  puts "Connecting to '#{HOST}' via SSH..."
+  puts "Please enter the remote password to start file transfer."
   puts "----------"
-  puts "Application is now live: #{HOST}"
+  puts ""
+  puts ""
+  puts "----------"
+  system("rsync -avz #{SOURCE} #{USER}@#{HOST}:#{DESTINATION}")
+  puts "----------"
+  puts ""
+  puts ""
+  puts "----------"
+  puts "File tranfer complete."
+  puts "Website is now live: #{HOST}"
   puts "----------"
 end
-
-# task :upload_test => :build do
-#   puts "----------"
-#   puts "Logging in to FTP @ #{HOST} ..."
-#   ftp = Net::FTP.new(HOST)
-#   ftp.binary=
-#   ftp.login(USER, PASS)
-#   puts "Logged in @ #{HOST}."
-#   puts "----------"
-#   puts "Changing dir to #{DESTINATION}"
-#   ftp.chdir(DESTINATION)
-#   puts "----------"
-#   puts "Clear '#{DESTINATION}'-folder"
-#   # Delete files however
-#   puts "Cleared."
-#   puts "----------"
-#   puts "Copy files ..."
-#   puts "LOCAL: #{SOURCE}"
-#   puts "to"
-#   puts "REMOTE: #{DESTINATION}"
-#   # Copy local files to ftp however
-#   puts "All files copied."
-#   puts "----------"
-#   puts "Application is now live: #{HOST}"
-#   puts "----------"
-# end
