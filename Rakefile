@@ -1,4 +1,3 @@
-require 'net/ssh'
 task :default => [:deploy]
 
 task :build do
@@ -17,7 +16,7 @@ task :deploy => :build do
   HOST = "myxotod.de"
   USER = "ssh-w00be51f"
   DESTINATION = "/www/htdocs/w00be51f/myxotod.de/v10"
-  SOURCE = "#{Dir.pwd}/_site/*"
+  SOURCE = "#{Dir.pwd}/_site/"
 
   puts "----------"
   puts "Connecting to '#{HOST}' via SSH..."
@@ -26,7 +25,7 @@ task :deploy => :build do
   puts ""
   puts ""
   puts "----------"
-  system("rsync -avz #{SOURCE} #{USER}@#{HOST}:#{DESTINATION}")
+  system("rsync -avz --delete #{SOURCE} #{USER}@#{HOST}:#{DESTINATION}")
   puts "----------"
   puts ""
   puts ""
