@@ -92,6 +92,8 @@ a {
   box-shadow: inset -10px 0 10px -10px #000;
   left: -80%;
   overflow: hidden;
+  display: none;
+  z-index: 999;
   a {
     color: #fff;
     display: block;
@@ -110,6 +112,7 @@ a {
 }
 .page {
   position: relative;
+  z-index: 0;
   .toggle-mobile-nav {
     position: fixed;
     top: 20px;

@@ -89,6 +89,9 @@ smaller than 800px (Mobile Landscape)
 smaller than 480px (Mobile Portrait)
 *************************************************************************************/
 @media screen and (max-width: 480px) {
+  .mobile-nav {
+    display: block;
+  }
   .page {
     .toggle-mobile-nav {
       display: block;
