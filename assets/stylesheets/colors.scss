@@ -56,10 +56,8 @@ $color-gamma: #3498db;
     .right-col {
       a {
         color: $color-alpha;
-        border-bottom: 1px solid #ddd;
         &:hover {
           color: darken($color-alpha, 20%);
-          border-bottom: 1px solid $color-alpha;
         }
       }
       .content {
@@ -67,9 +65,6 @@ $color-gamma: #3498db;
           header {
             h1 {
               color: $color-alpha;
-              a {
-                color: $color-alpha;
-              }
             }
           }
           main {
@@ -78,13 +73,6 @@ $color-gamma: #3498db;
                 &:before {
                   color: $color-alpha;
                 }
-              }
-            }
-          }
-          &:hover {
-            .teaser {
-              border-left: 5px solid $color-alpha;
-              &:before {
               }
             }
           }

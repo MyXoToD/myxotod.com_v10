@@ -5,6 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700); // Text
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700); // Headline
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Oswald:300);
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
 /* entypo */
@@ -74,7 +75,7 @@ html, body {
 
 body {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Roboto', sans-serif;
   background-color: #fff;
 }
@@ -120,6 +121,8 @@ a {
 .page {
   position: relative;
   z-index: 0;
+  height: 100%;
+  background: #eee;
   .toggle-mobile-nav {
     position: fixed;
     top: 20px;
@@ -138,6 +141,7 @@ a {
   }
   .left-col {
     width: 30%;
+    //max-width: 500px;
     position: fixed;
     left: 0;
     top: 0;
@@ -146,7 +150,7 @@ a {
     background-size: cover;
     background-position: 50% 50%;
     box-shadow: inset -15px 0px 15px -15px #000;
-    padding: 20px 0;
+    padding: 60px 0;
     @include BorderBox();
     .avatar {
       width: 30%;
@@ -174,7 +178,7 @@ a {
     nav {
       width: 50%;
       height: auto;
-      margin: 0 auto;
+      margin: 0 auto 30px auto;
       ul {
         list-style: none;
         li {
@@ -197,7 +201,7 @@ a {
       width: 100%;
       height: auto;
       position: absolute;
-      bottom: 20px;
+      bottom: 60px;
       text-align: center;
       overflow: hidden;
       background: rgba(#000, 0.5);
@@ -221,37 +225,45 @@ a {
     position: absolute;
     width: 70%;
     left: 30%;
-    height: 100%;
+    height: auto;
+    background: #eee;
     .content {
       width: 100%;
       max-width: 770px;
       padding: 60px;
       @include BorderBox();
       article {
+        background: #fff;
+        border-radius: 5px;
         margin-bottom: 46px;
+        padding: 20px;
+        border-bottom: 2px solid #ccc;
         header {
           h1 {
-            font-family: 'Josefin Sans', sans-serif;
-            text-transform: uppercase;
-            font-size: 48px;
-            font-weight: 400;
-            letter-spacing: -3px;
-            line-height: 48px;
-            padding-bottom: 46px;
-            a {
-              border-bottom: 0;
-              &:hover {
-                border-bottom: 0;
-              }
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+            font-weight: 300;
+            line-height: 40px;
+            padding-bottom: 20px;
+          }
+          .meta {
+            font-size: 12px;
+            color: #999;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+            .date {
+              float: left;
+            }
+            .author {
+              float: right;
+            }
+            &:after {
+              @include clearfix();
             }
           }
         }
         .teaser {
-          padding-left: 20px;
-          margin-bottom: 10px;
-          position: relative;
-          border-left: 5px solid #ddd;
-          @include addTransition(border-left, .5s);
+          margin-bottom: 20px;
         }
         main {
           h2 {
@@ -287,11 +299,23 @@ a {
             overflow-x: scroll;
             color: #fff;
             font-size: 16px;
+            &::-webkit-scrollbar {
+                height: 6px;
+            }
+             
+            &::-webkit-scrollbar-track {
+                border-radius: 3px;
+                background-color: rgba(#fff, 0.25);
+            }
+             
+            &::-webkit-scrollbar-thumb {
+                border-radius: 3px;
+                background-color: rgba(#fff, 0.5);
+            }
           }
           .profiles {
             font-size: 40px;
             a {
-              border-bottom: 0;
               &.entypo-github {
                 color: #000000;
               }
@@ -331,6 +355,18 @@ a {
         footer {
           font-size: 12px;
           color: #999;
+          border-top: 1px solid #eee;
+          .category {
+            float: left;
+            text-transform: uppercase;
+            font-weight: 600;
+          }
+          .reading-time {
+            float: right;
+          }
+          &:after {
+            @include clearfix();
+          }
         }
       }
     }
@@ -367,7 +403,7 @@ a {
       font-size: 12px;
       position: fixed;
       bottom: 0;
-      background-color: #fff;
+      background-color: #eee;
       &:before {
         height: 40px;
         width: 100%;
@@ -375,7 +411,7 @@ a {
         content: "";
         top: -40px;
         left: 0;
-        background: linear-gradient(rgba(#fff, 0), rgba(#fff, 1));
+        background: linear-gradient(rgba(#eee, 0), rgba(#eee, 1));
       }
     }
     .to-top {
