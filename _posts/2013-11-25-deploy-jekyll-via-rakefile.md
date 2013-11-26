@@ -5,24 +5,17 @@ date:   2013-11-25 17:23:00
 category: coding
 ---
 
-This website is the first I created with [Jekyll](http://jekyllrb.com). As you may know Jekyll is a ruby gem and therefore it needs a server with ruby installed on it. Unfortunately my current server doesn't support ruby. [Kevin](http://kevingimbel.com) told me about Github pages and its support for Jekyll, because his website is hosted like this.
+Your website is built of Jekyll? Your server doesn't support Ruby? Therefore you can't host you site? Well, exactly this was my case. I found a gem called [Capistrano](https://github.com/capistrano/capistrano), which is for website deployment but this thing seemed just too big for my needs. Anyway, I managed to push this Jekyll website on my server with just a single command. This is how I did it.
 
-I really adore hosting websites on my own server, so this option wasn't perfect for me. But what should I do? Meanwhile I really enjoy Jekyll and I don't want to generate a website build and upload the static output via FTP to my server everytime, this would really suck. So I need to deploy the script somehow else. I heard of the [Capistrano](https://github.com/capistrano/capistrano) gem and its power but after a quick overview, this seemed to be a little bit too powerful. Fuck. So I tried to solve it on my own.
+## The Rakefile
 
-## Using FTP
+First you need to create a *Rakefile* in the root directory of your Jekyll site. So add a new file and name it "Rakefile". Voilá, first step done.
 
-Because I'm familiar with FTP I thought about a script which automatically generates a stable build of my current website and transfers the files to my server. After a couple of tries I gave up. Fuck that shit, now I know why FTP has a bad reputation. Really, it sucks.
+## The Rake Tasks
 
-## Using SSH
-
-My sever doesn't support ruby but ssh access, so I gave it a try. First I came up with something using "net::ssh" to connect and edit my remote filesystem but that was crap like FTP, because I wasn't able to use some functions I really needed.
-
-So here is how I did it via my Rakefile:
-First I need two different tasks, one to build the static website out of the source files and one to upload the files.
+Now we need to feed the rakefile with two tasks. In this case a task is just a method which will be executed by the rakefile. The first task is going to be the *build*-task, it'll generate a stable build of your Jekyll source files into the "_site"-folder (by Jekyll defaults). The second task will connect to our server via SSH and synchronize our local files with the files on the server. Let's go then, open your rakefile:
 
 {% highlight ruby %}
-# Rakefile
-
 task :default => [:deploy]
 
 task :build do
@@ -34,52 +27,68 @@ task :deploy => :build do
 end
 {% endhighlight %}
 
-As you can see I added a line to make sure the default rake task is "deploy". I also added a statement to the deploy-task, that precompiles the "build"-task. With this setting I only need to call on command and this without calling it by its actual name. In a normal case I would need to use "rake deploy" to call the deploy task but in this case I only need to call "rake" to fire the action. This will automatically start the build task and then the deploy path, because I connected them.
+Alright, now we have our two tasks and another line. The first line is to make sure that the *deploy*-task is the default task. For example: If we wanna call a rake task via console, we need to use this command <tt>$ rake deploy</tt>. With that first line the deploy task is the default, so we can just call <tt>$ rake</tt> to start.
 
-To generate the Jekyll build I added this:
+Maybe you noticed another thing. The *deploy*-task is already different than the *build*-task. Why? This <tt>task :deploy => :build do</tt> means, that the *build*-task is called right before the *deploy*-task. Makes sense eh? Let's go on.
 
 {% highlight ruby %}
-# Rakefile
+task :default => [:deploy]
 
 task :build do
   system("jekyll build")
 end
-{% endhighlight %}
-
-This will generate the static website out of my source files and store it inside the "_site"-folder by jekyll defaults. Let's go on with the deploy task:
-
-{% highlight ruby %}
-# Rakefile
 
 task :deploy => :build do
-  HOST = "website.com"
-  USER = "SSH_USERNAME"
-  DESTINATION = "/ABSOLUTE/PATH/ON/REMOTE"
-  SOURCE = "#{Dir.pwd}/_site/"
+  # Upload files
 end
 {% endhighlight %}
 
-To make things easier I added some variables. The source directory is automatically generated. The next thing would be to connect to the server via SSH and upload the files. I tried a lot of functions and different solutions but only this one worked as I wanted:
+To generate our Jekyll build, this will do the trick: <tt>system("jekyll build")</tt>. It will just fire a system command, the same as we would do it manually. I guess I don't need to explain that further. 
 
 {% highlight ruby %}
-# Rakefile
-task :deploy => :build do
-  HOST = "website.com"
-  USER = "SSH_USERNAME"
-  DESTINATION = "/ABSOLUTE/PATH/ON/REMOTE"
-  SOURCE = "#{Dir.pwd}/_site/"
+task :default => [:deploy]
 
-  system("rsync -avz --delete #{SOURCE} #{USER}@#{HOST}:#{DESTINATION}")
+task :build do
+  system("jekyll build")
+end
+
+task :deploy => :build do
+  HOST = "example.com"
+  USER = "john-doe"
+  REMOTE = "/www/htdocs/foo/bar"
+  LOCAL = "#{Dir.pwd}/_site/"
 end
 {% endhighlight %}
 
-Rsync helps me to connect to my server and tranfer files from my local source path to the remote destination path. Option **-a** means archive mode. Option **-v** means "verbose", it gives me some feedback while uploading files. Option **-z** means "Compress file data during the transfer". As soon as rsync is called by the deploy task, a password prompt appears. Type in the SSH password and hit return to run the script. Voilá your site is online.
+To make things easier I made some variables with the data we need to continue.
 
-To get some more output I added some more lines:
+  - <tt>HOST</tt> => Remote server host
+  - <tt>USER</tt> => Remote server username
+  - <tt>REMOTE</tt> => The absolute path to the destination on your remote server
+  - <tt>LOCAL</tt> => The absolute path to your local "_site"-folder of Jekyll (automatically generated)
 
 {% highlight ruby %}
-# Rakefile
+task :default => [:deploy]
 
+task :build do
+  system("jekyll build")
+end
+
+task :deploy => :build do
+  HOST = "example.com"
+  USER = "john-doe"
+  REMOTE = "/www/htdocs/foo/bar"
+  LOCAL = "#{Dir.pwd}/_site/"
+
+  system("rsync -avz --delete #{LOCAL} #{USER}@#{HOST}:#{REMOTE}")
+end
+{% endhighlight %}
+
+Last but not least we need the <tt>rsync</tt>-command. This will connect to <tt>HOST</tt> with <tt>USER</tt> via SSH and synchronize the folders/files between the <tt>LOCAL</tt>- and <tt>REMOTE</tt>-directory. As soon as <tt>rsync</tt> is called, a password prompt appears. Type in the SSH password and hit return to run the script. Voilá your site is online. There are also some options: Option **-a** means archive mode. Option **-v** means "verbose", it gives me some feedback while uploading files. Option **-z** means "Compress file data during the transfer".
+
+Navigate to your Jekyll's root folder via console and type <tt>$ rake</tt> to start the tasks. To get a little bit more output I updated the script like this:
+
+{% highlight ruby %}
 task :default => [:deploy]
 
 task :build do
@@ -95,10 +104,10 @@ task :build do
 end
 
 task :deploy => :build do
-  HOST = "website.com"
-  USER = "SSH_USERNAME"
-  DESTINATION = "/ABSOLUTE/PATH/ON/REMOTE"
-  SOURCE = "#{Dir.pwd}/_site/"
+  HOST = "example.com"
+  USER = "john-doe"
+  REMOTE = "/www/htdocs/foo/bar"
+  LOCAL = "#{Dir.pwd}/_site/"
 
   puts "----------"
   puts "Connecting to '#{HOST}' via SSH..."
@@ -107,7 +116,7 @@ task :deploy => :build do
   puts ""
   puts ""
   puts "----------"
-  system("rsync -avz --delete #{SOURCE} #{USER}@#{HOST}:#{DESTINATION}")
+  system("rsync -avz --delete #{LOCAL} #{USER}@#{HOST}:#{REMOTE}")
   puts "----------"
   puts ""
   puts ""
