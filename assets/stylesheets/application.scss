@@ -103,17 +103,20 @@ a {
       width: 100%;
       a {
         color: #fff;
-        display: block;
+        display: inline-block;
         padding: 20px 0px 20px 60px;
+        width: 100%;
+        @include BorderBox();
         border-bottom: 1px solid #fff;
         text-transform: uppercase;
         @include addTransition(background, 0.5s);
-        &:last-of-type {
+      }
+      &:last-of-type {
+        a {
           border-top: 1px solid #fff;
           border-bottom: 0;
           position: absolute;
           bottom: 0;
-          width: 100%;
         }
       }
     }
