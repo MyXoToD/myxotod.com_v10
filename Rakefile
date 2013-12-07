@@ -34,3 +34,11 @@ task :deploy => :build do
   puts "Website is now live: #{HOST}"
   puts "----------"
 end
+
+task :jekyll do
+  system("jekyll serve --watch")
+end
+
+task :compass do
+  system("compass watch")
+end
