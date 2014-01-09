@@ -1,5 +1,7 @@
 name:     ""
 markdown: redcarpet
+redcarpet:
+  extensions: ["strikethrough"]
 pygments: true
 
 relative_permalinks: true
