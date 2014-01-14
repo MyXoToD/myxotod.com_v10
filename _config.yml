@@ -1,4 +1,12 @@
-name:     ""
+name: "Max Boll - Web-Developer - Speedcuber - MyXoToD.com"
+url: "myxotod.com"
+description: "Max Boll, Frontend and Backend Web-Developer from Mayence"
+author: "Max Boll"
+copyright: "Max Boll"
+#rss_path: "/rss"
+#rss_name: 
+#rss_post_limit: 
+
 markdown: redcarpet
 redcarpet:
   extensions: ["strikethrough"]
