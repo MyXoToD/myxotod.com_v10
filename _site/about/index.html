@@ -1,9 +1,74 @@
----
-layout: about
-title: About
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About &raquo; Max Boll &ndash; Web-Developer &ndash; Speedcuber &ndash; MyXoToD.com</title>
 
-<article>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no">
+    <meta name="description" content="Max Boll, Frontend and Backend Web-Developer from Mayence" />
+    <meta name="keywords" content="MyXoToD, Max Boll, programming, webdesign, html5, css3, sass, scss, frontend, backend" />
+    <link rel="author" href="/humans.txt" />
+
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" media="all" href="/assets/stylesheets/application.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="/assets/stylesheets/syntax.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="/assets/stylesheets/colors.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="/assets/stylesheets/media-queries.css" />
+
+    <!-- Javascripts -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/application.js"></script>
+  </head>
+  <body class="green">
+  <section class="mobile-nav">
+  <nav>
+    <ul>
+      <li>
+        <a href="/">Stream</a>
+      </li>
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      <li>
+        <a href="/lab/">Lab</a>
+      </li>
+      <li>
+        <a href="/imprint/">Imprint</a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+<section class="page">
+  <div class="toggle-mobile-nav entypo-menu"></div>
+  <aside class="left-col">
+    <a class="avatar" href="/">
+      
+    </a>
+    <div class="about">
+      Hello, my name is Max, I am a frontend &amp; backend web-developer from Mayence.
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Stream</a>
+        </li>
+        <li>
+          <a href="/about/">About</a>
+        </li>
+        <li>
+          <a href="/lab/">Lab</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="phrases hide-landscape">
+      
+    </div>
+  </aside>
+  <div class="right-col">
+    <div class="content">
+      <article>
   <header>
     <h1>About</h1>
   </header>
@@ -84,17 +149,61 @@ title: About
     <h2>You can meet me</h2>
     <p>I love to travel and because of my job I travel a lot. Here's where I'm going to be. If you want to meet, just drop a message. We could also meet, if you're around Frankfurt in Germany.</p>
     <ul>
-      {% for event in site.data.events %}
+      
         <li>
-          {% if event.over == true %}
-            <s>
-          {% endif %}
-          <strong>{{ event.date }}:</strong> {{ event.name }} ({{ event.location }}){% if event.link != "" %} <a href="{{ event.link }}" target="_blank" class="entypo-info-circled"></a>{% endif %}
-          {% if event.over == true %}
-            </s>
-          {% endif %}
+          
+          <strong>08. - 15. Mar 2014:</strong> Private/Business Trip (London/England)
+          
         </li>
-      {% endfor %}
+      
+        <li>
+          
+          <strong>11. Feb 2014:</strong> SIRO-A a technodelic visual show (Mainz/Germany) <a href="http://siro-a.de" target="_blank" class="entypo-info-circled"></a>
+          
+        </li>
+      
+        <li>
+          
+          <strong>21. - 26. Jan 2014:</strong> Snowboarding (Kitzbühel/Austria)
+          
+        </li>
+      
+        <li>
+          
+          <strong>18. - 19. Jan 2014:</strong> Frankfurt Cube Days (Frankfurt/Germany) <a href="http://cube.hackvalue.de/ffm14" target="_blank" class="entypo-info-circled"></a>
+          
+        </li>
+      
+        <li>
+          
+            <s>
+          
+          <strong>01. - 03. Dec 2013:</strong> dotJS (Paris/France) <a href="http://dotjs.eu" target="_blank" class="entypo-info-circled"></a>
+          
+            </s>
+          
+        </li>
+      
+        <li>
+          
+            <s>
+          
+          <strong>04. - 06. Sep 2013:</strong> Novoda Meeting (London/England) <a href="http://novoda.com" target="_blank" class="entypo-info-circled"></a>
+          
+            </s>
+          
+        </li>
+      
+        <li>
+          
+            <s>
+          
+          <strong>25. Jul - 04. Aug 2013:</strong> World Championship of Speedcubing (Las Vegas/USA)
+          
+            </s>
+          
+        </li>
+      
     </ul>
 
     <h2>Dev Group</h2>
@@ -114,3 +223,32 @@ title: About
     </p>
   </main>
 </article>
+
+      
+    </div>
+    <footer>
+      Handcrafted with <span class="entypo-heart"></span> by Max Boll &ndash; 
+      Powered by <a href="http://www.jekyllrb.com" target="_blank">Jekyll</a> &ndash; 
+      Happy Wednesday &ndash; 
+      <a href="/rss.xml">RSS</a> &ndash; 
+      <a href="/imprint/">Imprint</a>
+    </footer>
+    <div class="to-top entypo-up-bold"></div>
+  </div>
+</section>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-10077192-4']);
+      _gaq.push(['_setDomainName', 'myxotod.de']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_gat._anonymizeIp']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

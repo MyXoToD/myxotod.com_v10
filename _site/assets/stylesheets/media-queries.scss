@@ -1,0 +1,150 @@
+@mixin BorderBox() {
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/************************************************************************************
+smaller than 960px
+*************************************************************************************/
+@media screen and (max-width: 1000px) {
+  .page {
+    .left-col {
+      padding: 20px 0;
+      .avatar {
+        width: 40%;
+      }
+      .about {
+        width: 80%;
+      }
+      nav {
+        width: 80%;
+      }
+      .phrases {
+        bottom: 20px;
+      }
+    }
+    .right-col {
+      .content {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+/************************************************************************************
+smaller than 800px (Mobile Landscape)
+*************************************************************************************/
+@media screen and (max-width: 800px) {
+  .page {
+    .left-col {
+      height: auto;
+      width: 100%;
+      position: relative;
+      padding: 20px 0;
+      .avatar {
+        width: 33.3%;
+        margin: 0 auto 20px auto;
+      }
+      .about {
+        width: 60%;
+        margin-bottom: 20px;
+      }
+      nav {
+        width: 60%;
+        border-radius: 5px;
+        overflow: hidden;
+        height: 40px;
+        ul {
+          list-style: none;
+          li {
+            a {
+              display: block;
+              float: left;
+              width: 33.3%;
+              border-radius: 0;
+              @include BorderBox();
+              padding: 0 15px;
+            }
+          }
+        }
+        &:after {
+          content: "";
+          clear: both;
+          display: block;
+        }
+      }
+    }
+    .right-col {
+      width: 100%;
+      height: auto;
+      left: 0;
+      position: relative;
+      .content {
+        padding: 20px;
+        article {
+          margin-bottom: 34px;
+          header {
+            h1 {
+              padding-bottom: 20px;
+              font-size: 36px;
+            }
+          }
+        }
+      }
+      .pagination {
+        margin-bottom: 20px;
+      }
+      > footer {
+        padding: 15px 20px;
+        position: relative;
+      }
+      .to-top {
+        top: 20px;
+        right: 20px;
+      }
+    }
+  }
+  .hide-landscape {
+    display: none;
+  }
+}
+
+/************************************************************************************
+smaller than 480px (Mobile Portrait)
+*************************************************************************************/
+@media screen and (max-width: 480px) {
+  .mobile-nav {
+    display: block;
+  }
+  .page {
+    .toggle-mobile-nav {
+      display: block;
+    }
+    .left-col {
+      .avatar {
+        
+      }
+      .about {
+        margin: 0 auto;
+        width: 80%;
+      }
+      nav {
+        display: none;
+      }
+    }
+    .right-col {
+      .content {
+        article {
+          header {
+            h1 {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

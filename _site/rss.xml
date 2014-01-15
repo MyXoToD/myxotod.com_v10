@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>Max Boll - Web-Developer - Speedcuber - MyXoToD.com</title>
+    <link>myxotod.com</link>
+    <description>Max Boll, Frontend and Backend Web-Developer from Mayence</description>
+    <copyright>Max Boll</copyright>
+    <pubDate>Thu, 09 Jan 2014 16:00:00 -0000</pubDate>
+    <item>
+      <title>My personal review of 2k13</title>
+      <link>myxotod.com/my-personal-review-of-2k13</link>
+      <description>&lt;p&gt;I feel inspired by &lt;a href=&quot;http://kevingimbel.com/how-i-got-employed/&quot;&gt;Kevin&lt;/a&gt; to write an article about my life in 2013. A lot of things happened and I can&amp;#39;t wait to wrap them together and tell you.&lt;/p&gt;
+</description>
+      <pubDate>Thu, 09 Jan 2014 16:00:00 -0000</pubDate>
+      <guid>myxotod.com/my-personal-review-of-2k13</guid>
+      <dc:date>2014-01-09T16:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>dotJS 2013</title>
+      <link>myxotod.com/dotjs-2013</link>
+      <description>&lt;p&gt;It&amp;#39;s been a while since my last development conference. I was lucky to get one of the last &lt;em&gt;super-late bird tickets&lt;/em&gt; for the &lt;a href=&quot;http://dotjs.eu&quot;&gt;dotJS&lt;/a&gt; conference in Paris, France. As it predicts, it&amp;#39;s all about javascript and similar web-technologies. &lt;a href=&quot;http://www.timpietrusky.com&quot;&gt;Tim&lt;/a&gt; and I have teamed up and went to Paris together to meet &lt;a href=&quot;http://lucasbonomi.com&quot;&gt;Lucas&lt;/a&gt; for the first time and of course to go to that conference.&lt;/p&gt;
+</description>
+      <pubDate>Wed, 04 Dec 2013 15:00:00 -0000</pubDate>
+      <guid>myxotod.com/dotjs-2013</guid>
+      <dc:date>2013-12-04T15:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Deploy Jekyll via Rakefile</title>
+      <link>myxotod.com/deploy-jekyll-via-rakefile</link>
+      <description>&lt;p&gt;Your website is built of Jekyll? Your server doesn&amp;#39;t support Ruby? Therefore you can&amp;#39;t host you site? Well, exactly this was my case. I found a gem called &lt;a href=&quot;https://github.com/capistrano/capistrano&quot;&gt;Capistrano&lt;/a&gt;, which is for website deployment but this thing seemed just too big for my needs. Anyway, I managed to push this Jekyll website on my server with just a single command. This is how I did it.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 25 Nov 2013 17:23:00 -0000</pubDate>
+      <guid>myxotod.com/deploy-jekyll-via-rakefile</guid>
+      <dc:date>2013-11-25T17:23:00Z</dc:date>
+    </item>
+    <item>
+      <title>Journey to Las Vegas</title>
+      <link>myxotod.com/journey-to-las-vegas</link>
+      <description>&lt;iframe src=&quot;//player.vimeo.com/video/76904443?color=e74c3c&quot; width=&quot;100%&quot; height=&quot;351&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+      <pubDate>Mon, 18 Nov 2013 20:30:00 -0000</pubDate>
+      <guid>myxotod.com/journey-to-las-vegas</guid>
+      <dc:date>2013-11-18T20:30:00Z</dc:date>
+    </item>
+    <item>
+      <title>New design online</title>
+      <link>myxotod.com/new-design-online</link>
+      <description>&lt;p&gt;The recent weeks I struggeled with a couple of new designs for my website. I started work for version 9 of MyXoToD.com and at first I was really satisfied but after some days I kicked the whole thing right into the bin.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 18 Nov 2013 20:24:00 -0000</pubDate>
+      <guid>myxotod.com/new-design-online</guid>
+      <dc:date>2013-11-18T20:24:00Z</dc:date>
+    </item>
+    <dc:date>2014-01-09T16:00:00Z</dc:date>
+  </channel>
+</rss>

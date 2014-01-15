@@ -1,11 +1,41 @@
-- date: 08. - 15. Mar 2014
-  name: Private/Business Trip
-  location: London/England
+- date: "08. - 15. Mar 2014"
+  name: "Private/Business Trip"
+  location: "London/England"
+  link: ""
+  over: false
 
-- date: 08. - 15. Mar 2014
-  name: Private/Business Trip
-  location: London/England
+- date: "11. Feb 2014"
+  name: "SIRO-A a technodelic visual show"
+  location: "Mainz/Germany"
+  link: "http://siro-a.de"
+  over: false
 
-- date: 08. - 15. Mar 2014
-  name: Private/Business Trip
-  location: London/England
+- date: "21. - 26. Jan 2014"
+  name: "Snowboarding"
+  location: "Kitzbühel/Austria"
+  link: ""
+  over: false
+
+- date: "18. - 19. Jan 2014"
+  name: "Frankfurt Cube Days"
+  location: "Frankfurt/Germany"
+  link: "http://cube.hackvalue.de/ffm14"
+  over: false
+
+- date: "01. - 03. Dec 2013"
+  name: "dotJS"
+  location: "Paris/France"
+  link: "http://dotjs.eu"
+  over: true
+
+- date: "04. - 06. Sep 2013"
+  name: "Novoda Meeting"
+  location: "London/England"
+  link: "http://novoda.com"
+  over: true
+
+- date: "25. Jul - 04. Aug 2013"
+  name: "World Championship of Speedcubing"
+  location: "Las Vegas/USA"
+  link: ""
+  over: true
