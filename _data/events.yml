@@ -10,17 +10,23 @@
   link: "http://siro-a.de"
   over: false
 
+- date: "31. Jan - 02. Feb 2014"
+  name: "KOHI Slam"
+  location: "Karlsruhe/Germany"
+  link: "http://www.myslam.net/de/poetry-slam-calendar/event/10890"
+  over: false
+
 - date: "21. - 26. Jan 2014"
   name: "Snowboarding"
   location: "Kitzbühel/Austria"
   link: ""
-  over: false
+  over: true
 
 - date: "18. - 19. Jan 2014"
   name: "Frankfurt Cube Days"
   location: "Frankfurt/Germany"
   link: "http://cube.hackvalue.de/ffm14"
-  over: false
+  over: true
 
 - date: "01. - 03. Dec 2013"
   name: "dotJS"
