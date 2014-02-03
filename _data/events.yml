@@ -1,3 +1,9 @@
+- date: "11. - 12. Jul 2014"
+  name: "Happiness Festival"
+  location: "Karlsruhe/Germany"
+  link: "http://happiness-festival.de"
+  over: false
+
 - date: "08. - 15. Mar 2014"
   name: "Private/Business Trip"
   location: "London/England"
@@ -14,7 +20,7 @@
   name: "KOHI Slam"
   location: "Karlsruhe/Germany"
   link: "http://www.myslam.net/de/poetry-slam-calendar/event/10890"
-  over: false
+  over: true
 
 - date: "21. - 26. Jan 2014"
   name: "Snowboarding"
