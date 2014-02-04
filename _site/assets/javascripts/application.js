@@ -85,16 +85,13 @@ $(document).ready(function() {
 
   // Calculating age
   getAge();
-  //var age_interval = setInterval("getAge()", 1000);
 });
 
 function getAge() {
-  var birthday = new Date("02 22, 1993 22:15:00");
+  var birthday = new Date("02 22, 1993");
   var today = new Date();
-  var age_seconds = Math.floor(Math.abs(today - birthday) / 1000);
-  var age_years = Math.floor(age_seconds / 60 / 60 / 24 / 365);
-  $(".age").html(age_seconds + " seconds (" + age_years + " years)");
-  setTimeout("getAge()", 1000);
+  var age = Math.floor((today - birthday) / 1000 / 60 / 60 / 24 / 365);
+  $(".age").html(age);
 }
 
 // List of all phrases
