@@ -9,7 +9,16 @@
     <link>myxotod.com</link>
     <description>Max Boll, Frontend and Backend Web-Developer from Mayence</description>
     <copyright>Max Boll</copyright>
-    <pubDate>Thu, 09 Jan 2014 16:00:00 -0000</pubDate>
+    <pubDate>Tue, 04 Feb 2014 12:32:00 -0000</pubDate>
+    <item>
+      <title>Slide it baby</title>
+      <link>myxotod.com/slide-it-baby</link>
+      <description>&lt;p&gt;The recent days I started with a new presentation for a speak at one of the next Javascript conferences. I was looking for some nice slide tools online and I stumbled upon &lt;a href=&quot;http://slid.es&quot;&gt;Slid.es&lt;/a&gt; which looks kind of good to me. While I was satisfied with its feature I was curious to do something similar on my own. Yep, because I love to reinvent the wheel.&lt;/p&gt;
+</description>
+      <pubDate>Tue, 04 Feb 2014 12:32:00 -0000</pubDate>
+      <guid>myxotod.com/slide-it-baby</guid>
+      <dc:date>2014-02-04T12:32:00Z</dc:date>
+    </item>
     <item>
       <title>My personal review of 2k13</title>
       <link>myxotod.com/my-personal-review-of-2k13</link>
@@ -55,6 +64,6 @@
       <guid>myxotod.com/new-design-online</guid>
       <dc:date>2013-11-18T20:24:00Z</dc:date>
     </item>
-    <dc:date>2014-01-09T16:00:00Z</dc:date>
+    <dc:date>2014-02-04T12:32:00Z</dc:date>
   </channel>
 </rss>
