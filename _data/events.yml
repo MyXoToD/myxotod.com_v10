@@ -10,7 +10,7 @@
   link: "http://happiness-festival.de"
   over: false
 
-- date: "08. - 15. Mar 2014"
+- date: "10. - 14. Mar 2014"
   name: "Private/Business Trip"
   location: "London/England"
   link: ""
@@ -20,7 +20,7 @@
   name: "SIRO-A a technodelic visual show"
   location: "Mainz/Germany"
   link: "http://siro-a.de"
-  over: false
+  over: true
 
 - date: "31. Jan - 02. Feb 2014"
   name: "KOHI Slam"
