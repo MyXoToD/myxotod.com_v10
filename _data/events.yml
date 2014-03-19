@@ -14,7 +14,7 @@
   name: "Private/Business Trip"
   location: "London/England"
   link: ""
-  over: false
+  over: true
 
 - date: "19. Feb 2014"
   name: "SIRO-A a technodelic visual show"
