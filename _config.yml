@@ -10,12 +10,12 @@ copyright: "Max Boll"
 markdown: redcarpet
 redcarpet:
   extensions: ["strikethrough"]
-pygments: true
+highlighter: pygments
 
 relative_permalinks: true
 permalink:           :title
 
 paginate: 5
-paginate_path: "page:num"
+paginate_path: ":num"
 
 # http://blog.nitrous.io/2013/08/30/using-jekyll-plugins-on-github-pages.html
