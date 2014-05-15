@@ -14,7 +14,7 @@
   name: "Speaker at FrankfurtJS #2"
   location: "Frankfurt/Germany"
   link: "http://frankfurtjs.org"
-  over: false
+  over: true
 
 - date: "10. - 14. Mar 2014"
   name: "Private/Business Trip"
