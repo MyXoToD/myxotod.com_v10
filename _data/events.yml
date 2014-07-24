@@ -1,14 +1,32 @@
-- date: "13. - 17. Aug 2014"
+- date: "15. Aug 2014"
   name: "Gamescom"
   location: "Cologne/Germany"
   link: "http://gamescom.de"
   over: false
 
+- date: "25. - 27. Jul 2014"
+  name: "Das Fest"
+  location: "Karlsruhe/Germany"
+  link: "http://dasfest.de"
+  over: false
+
+- date: "15. - 20. Jul 2014"
+  name: "Private/Business Trip"
+  location: "Berlin/Germany"
+  link: ""
+  over: true
+
 - date: "11. - 12. Jul 2014"
   name: "Happiness Festival"
   location: "Karlsruhe/Germany"
   link: "http://happiness-festival.de"
-  over: false
+  over: true
+
+- date: "05. Jul 2014"
+  name: "Speedcubing Promotion"
+  location: "Mannheim/Germany"
+  link: ""
+  over: true
 
 - date: "14. May 2014"
   name: "Speaker at FrankfurtJS #2"
