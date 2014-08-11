@@ -8,7 +8,7 @@
   name: "Das Fest"
   location: "Karlsruhe/Germany"
   link: "http://dasfest.de"
-  over: false
+  over: true
 
 - date: "15. - 20. Jul 2014"
   name: "Private/Business Trip"
