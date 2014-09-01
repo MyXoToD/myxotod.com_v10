@@ -1,8 +1,26 @@
+- date: "17. Nov 2014"
+  name: "dotJS"
+  location: "Paris/France"
+  link: "http://dotjs.eu"
+  over: false
+
+- date: "14. Nov 2014"
+  name: "dotCSS"
+  location: "Paris/France"
+  link: "http://dotcss.eu"
+  over: false
+
+- date: "14. - 19. Oct 2014"
+  name: "Some kind of work/vacation trip"
+  location: "Porto/Portugal"
+  link: ""
+  over: false
+
 - date: "15. Aug 2014"
   name: "Gamescom"
   location: "Cologne/Germany"
   link: "http://gamescom.de"
-  over: false
+  over: true
 
 - date: "25. - 27. Jul 2014"
   name: "Das Fest"
