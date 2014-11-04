@@ -1,15 +1,9 @@
 task :default => [:deploy]
 
 task :build do
-  puts "----------"
-  puts "Generating current Jekyll build..."
-  puts "----------"
+  puts "---> Generating current Jekyll build."
   system("jekyll build")
-  puts "----------"
-  puts "Build ready."
-  puts "----------"
-  puts ""
-  puts ""
+  puts "---> Build ready."
 end
 
 task :deploy => :build do
@@ -18,19 +12,9 @@ task :deploy => :build do
   DESTINATION = "/www/htdocs/w00be51f/myxotod.de/v10"
   SOURCE = "#{Dir.pwd}/_site/"
 
-  puts "----------"
-  puts "Connecting to '#{HOST}' via SSH..."
-  puts "Please enter the remote password to start file transfer."
-  puts "----------"
-  puts ""
-  puts ""
-  puts "----------"
+  puts "---> Connecting to '#{HOST}' via SSH."
+  puts "---> Please enter the remote password to start file transfer."
   system("rsync -avz --delete #{SOURCE} #{USER}@#{HOST}:#{DESTINATION}")
-  puts "----------"
-  puts ""
-  puts ""
-  puts "----------"
-  puts "File tranfer complete."
-  puts "Website is now live: #{HOST}"
-  puts "----------"
+  puts "---> File tranfer complete."
+  puts "---> Website is now live: #{HOST}"
 end
