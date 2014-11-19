@@ -23,7 +23,7 @@ Location: Paris, France
 
 
 /* SITE */                            
-Last update: 2014/11/17
+Last update: 2014/11/19
 Standards: HTML5, CSS3, SCSS, SASS, Javascript, Ruby, Liquid
 Components: jQuery, Jekyll, Compass
 Software: Sublime Text 2, Google Chrome, Ubuntu, FileZilla, Github, Codepen

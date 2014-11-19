@@ -1,8 +1,14 @@
+- date: "20. - 25. Jan 2015"
+  name: "Snowboarding"
+  location: "Kitzbühel/Austria"
+  link: ""
+  over: false
+
 - date: "13. - 18. Nov 2014"
   name: "dotJS & dotCSS"
   location: "Paris/France"
   link: "http://dotjs.eu"
-  over: false
+  over: true
 
 - date: "15. Aug 2014"
   name: "Gamescom"
