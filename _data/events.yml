@@ -1,8 +1,14 @@
+- date: "March 2015"
+  name: "Snowboarding"
+  location: "Neuss/Germany"
+  link: "http://www.allrounder.de/"
+  over: false
+
 - date: "20. - 25. Jan 2015"
   name: "Snowboarding"
   location: "Kitzbühel/Austria"
   link: ""
-  over: false
+  over: true
 
 - date: "13. - 18. Nov 2014"
   name: "dotJS & dotCSS"
