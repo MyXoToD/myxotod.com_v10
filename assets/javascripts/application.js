@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  april.fool();
+
   // Scroll Top Button
   $(window).scroll(function() {
     if ($(window).scrollTop() > 150) {
@@ -172,3 +174,14 @@ function initPhrases() {
     break;
   }
 }
+
+april = {
+  fool: function() {
+    d = new Date();
+    month = d.getUTCMonth() + 1;
+    day = d.getUTCDate();
+    if (month == 4 && day == 1) {
+      window.location.href = "http://harlemify.com/?url=myxotod.com";
+    }
+  }
+};

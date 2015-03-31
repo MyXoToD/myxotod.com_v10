@@ -14,13 +14,13 @@
   name: "Snowboarding"
   location: "Neuss/Germany"
   link: "http://www.allrounder.de/"
-  over: false
+  over: true
 
 - date: "22. Mar 2015"
   name: "Escape The Room"
   location: "Wiesbaden/Germany"
   link: "http://www.countdown-games.de/"
-  over: false
+  over: true
 
 - date: "20. - 25. Jan 2015"
   name: "Snowboarding"
