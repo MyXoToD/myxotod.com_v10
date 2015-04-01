@@ -181,7 +181,9 @@ april = {
     month = d.getUTCMonth() + 1;
     day = d.getUTCDate();
     if (month == 4 && day == 1) {
-      window.location.href = "http://harlemify.com/?url=myxotod.com";
+      if (window.location.href != "http://harlemify.com/?url=myxotod.com") {
+        window.location.href = "http://harlemify.com/?url=myxotod.com";
+      }
     }
   }
 };
