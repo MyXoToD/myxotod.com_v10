@@ -8,7 +8,7 @@
   name: "Vacation"
   location: "London/England"
   link: ""
-  over: false
+  over: true
 
 - date: "28. Mar 2015"
   name: "Snowboarding"
